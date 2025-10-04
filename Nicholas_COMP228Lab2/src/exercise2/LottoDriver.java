@@ -29,7 +29,6 @@ public class LottoDriver {
             int[] numbersArray = lotto.getArray();
             int numbersSum = numbersArray[0] + numbersArray[1] + numbersArray[2];
             JOptionPane.showMessageDialog(null, "Attempt #" + userTries + ": \n\nCorrect answer: " + numbersSum + "\nYour answer: " + userInput);
-            userInput = 0;
 
             // Checks to see if user guessed correctly within 5 attempts.
             if (numbersSum == userInput) {
@@ -37,6 +36,8 @@ public class LottoDriver {
                 win = true;
                 break;
             }
+
+            userInput = 0;
         }
 
         // If the user does not guess correctly after 5 attempts, the user loses.
