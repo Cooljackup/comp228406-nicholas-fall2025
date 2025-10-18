@@ -7,8 +7,8 @@ package exercise3;
 
 public class BusinessMortgage extends Mortgage {
 
-    // BusinessMortgage constructor. (With 1% prime rate.)
-    public BusinessMortgage(int mortgageNumber, String customerName, double mortgageAmount, double primeRate, int term) {
-        super(mortgageNumber, customerName, mortgageAmount, primeRate + 0.01, term);
+    // BusinessMortgage constructor. (With 1% interest rate.)
+    public BusinessMortgage(int mortgageNumber, String customerName, double mortgageAmount, double interestRate, int term) {
+        super(mortgageNumber, customerName, mortgageAmount, interestRate + 1, term);
     }
 }

@@ -19,31 +19,20 @@ public class Mortgage extends MortgageConstants {
     public Mortgage(int mortgageNumber, String customerName, double mortgageAmount, double interestRate, int term) {
         this.mortgageNumber = mortgageNumber;
         this.customerName = customerName;
-
-        if (mortgageAmount > maximumMortgageAmount ) {
-            this.mortgageAmount = maximumMortgageAmount;
-        } else {
-            this.mortgageAmount = mortgageAmount;
-        }
-
-        if (term != shortTerm && term != mediumTerm && term != longTerm) {
-            this.term = shortTerm;
-        } else {
-            this.term = term;
-        }
-
+        this.mortgageAmount = Math.min(mortgageAmount, maximumMortgageAmount);
+        this.term = term;
         this.interestRate = interestRate;
     }
 
-    // Mortgage info method to display all the mortgage information.
+    // Mortgage info method to display all the mortgage information. (interestRate / 100 allows us to have the user input 1 and it will be 1%.)
     public String getMortgageInfo() {
-        totalOwed = mortgageAmount + (mortgageAmount * interestRate * term);
+        totalOwed = mortgageAmount + (mortgageAmount * (interestRate / 100) * term);
         return "Bank Name: " + bankName +
                 "\nMortgage Number: " + mortgageNumber +
                 "\nCustomer Name: " + customerName +
-                "\nMortgage Amount: " + mortgageAmount +
-                "\nInterest Rate: "+ (interestRate * 100) + "%" +
+                "\nMortgage Amount: $" + mortgageAmount +
+                "\nInterest Rate: "+ interestRate + "%" +
                 "\nMortgage Term: " + term + " year(s)" +
-                "\nTotal Amount Owed: " + totalOwed;
+                "\nTotal Amount Owed: $" + totalOwed;
     }
 }

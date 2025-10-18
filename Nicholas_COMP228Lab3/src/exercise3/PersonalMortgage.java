@@ -7,8 +7,8 @@ package exercise3;
 
 public class PersonalMortgage extends Mortgage {
 
-    // PersonalMortgage constructor. (With 2% prime rate.)
-    public PersonalMortgage(int mortgageNumber, String customerName, double mortgageAmount, double primeRate, int term) {
-        super(mortgageNumber, customerName, mortgageAmount, primeRate + 0.02, term);
+    // PersonalMortgage constructor. (With 2% interest rate.)
+    public PersonalMortgage(int mortgageNumber, String customerName, double mortgageAmount, double interestRate, int term) {
+        super(mortgageNumber, customerName, mortgageAmount, interestRate + 2, term);
     }
 }
