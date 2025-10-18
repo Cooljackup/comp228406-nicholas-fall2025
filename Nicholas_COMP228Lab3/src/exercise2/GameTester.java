@@ -11,7 +11,7 @@ public abstract class GameTester {
     public String name;
     public boolean fullTime;
 
-    // GameTester method.
+    // GameTester class.
     public GameTester(String name, boolean fullTime) {
         this.name = name;
         this.fullTime = fullTime;
@@ -25,7 +25,8 @@ public abstract class GameTester {
     public abstract double salaryAmount();
 
     // Information displaying method.
-    public void gameTesterInformation() {
-        System.out.println("Employee Name: " + getName() + " - Full Time: " + getFullTime() + " - Salary: $" + salaryAmount());
+    public String gameTesterInformation() {
+        return "Employee Name: " + getName() + "\nFull Time: " + getFullTime() + "\nSalary: $" + salaryAmount();
     }
+
 }

@@ -11,7 +11,7 @@ public class FullTimeGameTester extends GameTester {
     public double baseSalary = 3000;
 
     // FullTimeGameTester class.
-    public FullTimeGameTester(String name, boolean fullTime) {
+    public FullTimeGameTester(String name) {
         super(name, true);
     }
 

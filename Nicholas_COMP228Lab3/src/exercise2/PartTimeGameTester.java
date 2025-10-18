@@ -9,16 +9,16 @@ public class PartTimeGameTester extends GameTester {
 
     // Instance variables.
     public double hourlyRate = 20;
-    public int numberOfHoursWorked;
+    public double numberOfHoursWorked;
 
     // PartTimeGameTester class.
-    public PartTimeGameTester(String name, boolean fullTime, int numberOfHoursWorked) {
+    public PartTimeGameTester(String name, double numberOfHoursWorked) {
         super(name, false);
         this.numberOfHoursWorked = numberOfHoursWorked;
     }
 
     // Getter.
-    public int getNumberOfHoursWorked() { return numberOfHoursWorked; }
+    public double getNumberOfHoursWorked() { return numberOfHoursWorked; }
 
     // Method to calculate a part time game tester's hourly rate.
     public double salaryAmount() {
