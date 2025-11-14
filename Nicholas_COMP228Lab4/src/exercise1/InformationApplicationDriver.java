@@ -6,5 +6,7 @@
 package exercise1;
 
 public class InformationApplicationDriver {
-
+    public static void main(String[] args) {
+        InformationApplication.main(args);
+    }
 }
