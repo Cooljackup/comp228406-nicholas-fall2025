@@ -26,7 +26,7 @@ public class InformationApplication extends Application {
     public CheckBox studentCouncil, volunteerWork;
     public TextArea outputDisplay;
     public ObservableList<String> computerScienceCourses = FXCollections.observableArrayList("Java", "C#", "Python");
-    public ObservableList<String> businessCourses =  FXCollections.observableArrayList("Marketing", "Finance", "Law");
+    public ObservableList<String> businessCourses = FXCollections.observableArrayList("Marketing", "Finance", "Law");
 
     // JavaFX entry point method.
     public void start(Stage stage) {
